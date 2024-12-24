@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bank Page</title>
+	<style>
+		body{
+			background-image:url("SBI_logo.jpg");
+            background-repeat:no-repeat;
+            background-position:bottom;
+            background-size:center;
+            
+		}
+        #Bank_name {
+        	color: blue;
+        	font-size: 45px;
+        	font-weight: bolder;
+        }
+        #card {
+        	font-size: 30px;
+        	font-family: sans-serif;
+        	position: relative;
+        	top: -20px;
+        }
+        
+        .container {
+        	display: flex;
+        	justify-content: space-between;
+        	padding: 50px;
+        }
+        .left-options, .right-options {
+        	width: 200px; 
+        }
+        .left-options p, .right-options p {
+        	margin: 20px 0;
+        	font-size: 20px;
+        }
+        #DEPOSIT{
+            border:1px solid gray;
+            width: 160px;
+            height: 40px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 13px;
+            background-color: lightblue;
+
+        }
+        #TRANSFER{
+            position: absolute;
+            top:350px;
+            border:1px solid gray;
+            width: 160px;
+            height: 40px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 13px;
+            background-color: lightblue;
+        }
+        #PIN-CHANGE{
+        	position: absolute;
+        	top:450px;
+        	border:1px solid gray;
+            width: 160px;
+            height: 40px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 13px;
+            background-color: lightblue;
+        }
+        #OTHERS{
+        	position: absolute;
+        	top:550px;
+        	border:1px solid gray;
+            width: 160px;
+            height: 40px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 13px;
+            background-color: lightblue;
+        }
+        #FAST_CASH{
+        	border:1px solid gray;
+            width: 160px;
+            height: 40px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 13px;
+            background-color: lightblue;
+
+        }
+        #CASH_WITHDRAWAL{
+        	position: absolute;
+        	top:350px;
+        	border:1px solid gray;
+            width: 160px;
+            height: 40px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 13px;
+            padding-bottom: 13px;
+            background-color: lightblue;
+        }
+        #BALANCE_ENQUIRY{
+        	position: absolute;
+        	top:450px;
+        	border:1px solid gray;
+            width: 160px;
+            height: 40px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 13px;
+            padding-bottom: 13px;
+            background-color: lightblue;
+        }
+        #MINI_STATEMENT{
+        	position: absolute;
+        	top:550px;
+        	border:1px solid gray;
+            width: 160px;
+            height: 40px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 13px;
+            padding-bottom: 13px;
+            background-color: lightblue;
+
+	</style>
+</head>
+<body>
+	<center>
+       <div>
+   	      <p id="Bank_name">Welcome to State Bank of India</p>
+          <h3 id="card">Please Select Your Transaction</h3>
+       </div>
+   </center>
+   <div class="container">
+   	<div class="left-options">
+   	   <p id="DEPOSIT" onclick="">DEPOSIT</p>
+   	   <p id="TRANSFER">TRANSFER</p>
+   	   <p id="PIN-CHANGE">PIN CHANGE</p>
+   	   <p id="OTHERS">OTHERS</p>
+   	</div>
+   	<div class="right-options">
+   	   <p id="FAST_CASH">FAST CASH</p>
+   	   <p id="CASH_WITHDRAWAL">CASH WITHDRAWAL</p>
+   	   <p id="BALANCE_ENQUIRY">BALANCE ENQUIRY</p>
+   	   <p id="MINI_STATEMENT">MINI STATEMENT</p>
+   	</div>
+   </div>
+</body>
+</html>
