@@ -1,0 +1,138 @@
+<html>
+	<head>
+       <title>Calculator</title>
+       <style>
+       .Calculator{
+           position: relative;
+           top:50px;
+           margin:auto;
+           background-color:gray;
+           width:300px;
+           height:440px;
+           border-radius:10px;
+           padding:8px;
+           -webkit-box-shadow: 20px 23px 16px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 20px 23px 16px 0px rgba(0,0,0,0.75);
+box-shadow: 20px 23px 16px 0px rgba(0,0,0,0.75);
+Copy Text
+       }
+       .display-box{
+             position: relative;
+             top:-8px;
+             left:5px;
+       	     width:330px;
+       	     height:50px;
+       	     background-color:white;
+       	     border-radius: 5px;
+       }
+       input[type=button]{
+       	      width:50px;
+       	      height:20px;
+       	      border-radius:4px;
+       	      border: 1px solid white;
+       	      outline: none;
+       	      margin: 5px;
+       }
+       input:active[type=button]{
+       	      color: white;
+       	      background-color: gray;
+       	      font-size:20;
+       }
+       .All-btns{
+             padding:7px;
+             position: relative;
+             top:-10px;
+       }
+       #ac{
+             position: relative;
+             top:-8px;
+             left:5px;
+             background-color:#f0417e;
+       }
+
+       </style>
+    </head>
+    <body>
+    	<table class="Calculator">
+    		<tr>
+    			<td colspan="5"><input type="text" class="display-box" id="result" disabled></td>
+    			<td><input type="button" style="width: 50px; height: 50px;" value="AC" id="ac" onclick="clear_screen()" id="btn"></td>
+    		</tr>
+    		<tr>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="1" onclick="display(1)"></td>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="2" onclick="display(2)"></td>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="3" onclick="display(3)"></td>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="+" onclick="display('+')"></td>
+                <td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="sin" onclick="sinCal()"></td>
+                <td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="tan" onclick="tanCal()"></td>
+    		</tr>
+    		<tr>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="4" onclick="display(4)"></td>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="5" onclick="display(5)"></td>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="6" onclick="display(6)"></td>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="-" onclick="display('-')"></td>
+                <td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="cos" onclick="cosCal()"></td>
+                <td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="cot" onclick="cotCal()"></td>
+    		</tr>
+    		<tr>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="7" onclick="display(7)"></td>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="8" onclick="display(8)"></td>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="9" onclick="display(9)"></td>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns"value="*" onclick="display('*')"></td>
+                <td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="%" onclick="display('%')"></td>
+                <td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="sec" onclick="secCal()"></td>
+    		</tr>
+    		<tr>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="." onclick="display('.')"></td>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="0" onclick="display(0)"></td>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="=" id="btn" onclick="Calculation()"></td>
+    			<td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="/" onclick="display('/')"></td>
+                <td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="log" onclick="display('log')"></td>
+                <td><input type="button" style="width: 50px; height: 50px; font-size: 20px" class="All-btns" value="cosec" onclick="cosecCal()"></td>
+    		</tr>
+    	</table>
+    	<script type="text/javascript">
+    		function display(value){
+    			document.getElementById('result').value+=value;
+            }
+            function clear_screen(){
+            	document.getElementById('result').value="";
+            }
+            function Calculation(){
+            	var x=document.getElementById('result').value;
+            	var output=eval(x)
+            	document.getElementById('result').value=output
+            }
+            function sinCal(){
+                var x=document.getElementById('result').value
+                var y=Math.sin(x * Math.PI / 180);
+                document.getElementById('result').value=y
+            }
+            function cosCal(){
+                var x=document.getElementById('result').value
+                var y=Math.cos(x * Math.PI / 180);
+                document.getElementById('result').value=y
+            }
+            function tanCal(){
+                var x=document.getElementById('result').value
+                var y=Math.tan(x * Math.PI / 180);
+                document.getElementById('result').value=y
+            }
+            function cotCal(){
+                var x=document.getElementById('result').value
+                var y=1/tanCal();
+                document.getElementById('result').value=y
+            }
+            function secCal(){
+                var x=document.getElementById('result').value
+                var y=Math.sec(x * Math.PI / 180);
+                document.getElementById('result').value=y
+            }
+            function cosecCal(){
+                var x=document.getElementById('result').value
+                var y=Math.cosec(x * Math.PI / 180);
+                document.getElementById('result').value=y
+            }
+    	</script>
+    </body>
+</html>
