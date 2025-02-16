@@ -5,7 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Image Gallery</title>
     <style>
-       
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #222;
+            color: #fff;
+        }
+
+        .container {
+            width: 200px;
+            height: 350px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            animation: gallery 20s linear infinite;
+            cursor: pointer;
+        }
+
+        .container span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-origin: center;
+            transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
+        }
 
         .container img {
             height: 100%;
@@ -33,7 +59,7 @@
         <span style="--i:5"> <img src="Rohit.avif" alt="Image 5"></span>
         <span style="--i:6"> <img src="Virat.jpg" alt="Image 6"></span>
         <span style="--i:7"> <img src="Ro.webp" alt="Image 7"></span>
-        <span style="--i:8"> <img src="Bumrah.webp" alt="Image 8"></span>
+        <span style="--i:8"> <img src="Vk.webpBumrah.webp" alt="Image 8"></span>
     </div>
 </body>
 </html>
