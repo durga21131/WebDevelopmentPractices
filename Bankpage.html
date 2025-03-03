@@ -3,7 +3,69 @@
 <head>
 	<title>Bank Page</title>
     <style>
+        body{
+            background-image:url("SBI_logo.jpg");
+            background-repeat:no-repeat;
+            background-position:bottom;
+            background-size:center;
+            
+        }
+        #Bank_name {
+            color: blue;
+            font-size: 45px;
+            font-weight: bolder;
+        }
+        #card {
+            font-size: 30px;
+            font-family: sans-serif;
+            position: relative;
+            top: -20px;
+        }
         
+        .container {
+        	display: flex;
+        	justify-content: space-between;
+        	padding: 50px;
+        }
+        .left-options, .right-options {
+        	width: 200px; 
+        }
+        .left-options p, .right-options p {
+        	margin: 20px 0;
+        	font-size: 20px;
+        }
+        #DEPOSIT{
+            border:1px solid gray;
+            width: 160px;
+            height: 40px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 13px;
+            background-color: lightblue;
+
+        }
+        #TRANSFER{
+            position: absolute;
+            top:350px;
+            border:1px solid gray;
+            width: 160px;
+            height: 40px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 13px;
+            background-color: lightblue;
+        }
+        #PIN-CHANGE{
+        	position: absolute;
+        	top:450px;
+        	border:1px solid gray;
+            width: 160px;
+            height: 40px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 13px;
+            background-color: lightblue;
+        }
         #OTHERS{
         	position: absolute;
         	top:550px;
